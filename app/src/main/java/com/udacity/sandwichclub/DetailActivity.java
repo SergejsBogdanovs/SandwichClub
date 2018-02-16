@@ -1,23 +1,17 @@
 package com.udacity.sandwichclub;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
-import com.udacity.sandwichclub.databinding.ActivityDetailBinding;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
 import org.json.JSONException;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -26,14 +20,10 @@ public class DetailActivity extends AppCompatActivity {
 
     private Sandwich mSandwich = null;
 
-    private ActivityDetailBinding mDetailBinding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
-        mDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
 
